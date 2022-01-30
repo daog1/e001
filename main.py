@@ -9,8 +9,6 @@ if __name__ == '__main__':
     w3.eth.default_account = w3.eth.accounts[0]
     jsonf = open("Greeter.json", 'rb')
     jsobjs = json.load(jsonf)
-    #Greeter = w3.eth.contract(abi=jsobjs['abi'], bytecode=jsobjs['bytecode'])
-    #Greeter.greeter.functions.greet().call()
     greeter = w3.eth.contract(
         address='0xB5816B1C17ce9386019ac42310dB523749F5f2c3',
         abi=jsobjs['abi']
